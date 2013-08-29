@@ -8,9 +8,12 @@ show relations of food company in Taiwan
 
 # Steps
 1. Fetch food additives data
-
+	a. modify config file
+		 put your mongdb url
 2. Create Database
-
+```
+$ node food
+```
 3. Using OCR or other method to record
 	 Food and its Food Additives
 
