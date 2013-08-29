@@ -11,11 +11,8 @@ show relations of food company in Taiwan
 	* modify config file
 		put your db url
 2. Create Database
->  ```
-   $ node food
-   ```
-3. Using OCR or other method to record
-	 Food and its Food Additives
+	$ node food
+3. Using OCR or other method to record Food and its Food Additives
 
 4. make relation of Food and its additives 
 
