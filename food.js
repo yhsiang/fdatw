@@ -5,11 +5,13 @@ var https = require('https')
 	,	Server = require('mongodb').Server
 	,	MongoClient = require('mongodb').MongoClient
 	, Db = require('mongodb').Db
-	,	parseString = require('xml2js').parseString;
+	,	parseString = require('xml2js').parseString
+	, config = require('./config');
 
 var mongoclient = new MongoClient();
 
-var dburl = 'mongodb://g0v:fdatw@ds041178.mongolab.com:41178/fdatw';
+var dburl = config.db;
+
 function storeIt(docs) {
 	mongoclient.connect(dburl, function (err, db) {
 		var FoodAdditives = db.collection('FoodAdditives');
@@ -65,11 +67,6 @@ function parseAndstore(data) {
 	});
 	storeIt(newData);
 }
-
-var config = {
-	url: 'https://consumer.fda.gov.tw/Food/ashx/getFoodAddResult.ashx',
-	pageNo: 500,
-	start: 0 }
 
 fetch(config, function (pages, result) {
 	parseAndstore(result.root.results[0].aResult);	
