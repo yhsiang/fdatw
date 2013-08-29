@@ -1,0 +1,25 @@
+{
+  "name": "fdatw",
+  "version": "0.0.1",
+  "description": "an application to build relation of food company and its product",
+  "main": "food.js",
+  "dependencies": {
+    "xml2js": "~0.2.8",
+    "mongodb": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "nodejs",
+    "parser",
+    "food",
+    "additives",
+    "tw"
+  ],
+  "author": "Yuan Hsiang Cheng",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
